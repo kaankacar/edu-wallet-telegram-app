@@ -31,7 +31,7 @@ Try the bot here: [https://t.me/EduWalletBot/eduwallet](https://t.me/EduWalletBo
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/edu-wallet-telegram-app.git
+   git clone https://github.com/kaankacar/edu-wallet-telegram-app.git
    cd edu-wallet-telegram-app
    ```
 

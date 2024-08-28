@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# EDU Wallet Telegram Mini App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+EDU Wallet is a Telegram Mini App that allows users to create and manage a wallet for EDU tokens on the Open Campus Codex Sepolia network. This app provides a user-friendly interface for creating wallets, sending and receiving EDU tokens, and viewing wallet balances.
 
-In the project directory, you can run:
+Try the bot here: [https://t.me/EduWalletBot/eduwallet](https://t.me/EduWalletBot/eduwallet)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Create a new EDU wallet
+- View wallet balance
+- Send EDU tokens to other addresses
+- Receive EDU tokens (generate QR code for wallet address)
+- Copy wallet address to clipboard
+- Scan QR codes for easy address input
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- React.js
+- Ethers.js
+- TailwindCSS
+- react-qr-scanner
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+- Node.js (v14 or later)
+- npm (v6 or later)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/edu-wallet-telegram-app.git
+   cd edu-wallet-telegram-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-### `npm run eject`
+3. Create a `.env` file in the root directory and add your RPC URL:
+   ```
+   REACT_APP_RPC_URL=https://open-campus-codex-sepolia.drpc.org
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the app in development mode:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Learn More
+## Building for Production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To build the app for production:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm run build
+```
 
-### Code Splitting
+This will create a `build` folder with the production-ready app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment
 
-### Analyzing the Bundle Size
+1. Deploy the built app to a hosting service of your choice (e.g., Netlify, Vercel, GitHub Pages).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Set up a Telegram Bot:
+   - Create a new bot via BotFather on Telegram
+   - Use the `/newapp` command to create a Web App for your bot
+   - Set the Web App URL to the URL where you hosted your app
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Open the Telegram bot: [https://t.me/EduWalletBot/eduwallet](https://t.me/EduWalletBot/eduwallet)
+2. Start the bot to access the EDU Wallet Mini App
+3. Use the interface to create a wallet, send/receive EDU tokens, and manage your balance
 
-### Advanced Configuration
+## Security Considerations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This is a basic implementation and should not be used for managing large amounts of tokens without further security enhancements. Consider the following for a production environment:
 
-### Deployment
+- Implement proper key management and storage
+- Add more robust error handling
+- Implement proper transaction signing (possibly on a backend)
+- Add more user feedback for operations
+- Implement proper state management (e.g., with Redux)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License.
+
+## Disclaimer
+
+This app is for educational purposes only. Use at your own risk. The developers are not responsible for any loss of funds or other issues that may arise from using this application.
